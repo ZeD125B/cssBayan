@@ -24,22 +24,19 @@ a.header__link {
   font-size: calc(1em + 1vw);
   text-decoration: none;
   margin: 20px 0 20px 0
-
 }
 
 a.header__link:visited {
   color: black;
 }
 
-label:hover > a > img {
-  display: block;
-}
-
 .content__img {
-  display: none;
-  max-width: 200px;
+  display: block;
+  width: 0;
+  max-width: 1000px;
   margin: auto;
-  padding-bottom: 40px;
+  padding-bottom: 25px;
+  transition: width 1s;
 }
 
 .content__plus {
@@ -48,14 +45,28 @@ label:hover > a > img {
   max-height: 16px;
 }
 
+label:hover > a > img {
+  width: 100%;
+  
+}
+
+label > input:checked + div + a > img {
+  width: 100%;
+}
+
 label > input {
   visibility: hidden;
   position: absolute;
 }
 
-label > input:checked + div + a > img {
-  display: block;
+@media (min-width: 320px) {
+  .container {
+    max-width: 400px
+  }
 
+  .content__img {
+    max-width: 400px;
+  }
 }
 
 @media (min-width: 820px) {
