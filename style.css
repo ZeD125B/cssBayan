@@ -5,7 +5,7 @@ body {
 }
 
 h1 {
-  font-size: calc(1em + 4vw);
+  font-size: calc(1rem + 3vw);
 }
 
 .container {
@@ -20,8 +20,13 @@ h1 {
   border-top: 1px solid black;
 }
 
+label > div + a {
+  display: block;
+  
+}
+
 a.header__link {
-  font-size: calc(1em + 1vw);
+  font-size: calc(1rem + 1vw);
   text-decoration: none;
   margin: 20px 0 20px 0
 }
@@ -35,7 +40,6 @@ a.header__link:visited {
   width: 0;
   max-width: 1000px;
   margin: auto;
-  padding-bottom: 25px;
   transition: width 1s;
 }
 
@@ -43,6 +47,11 @@ a.header__link:visited {
   text-align: center;
   max-width: 16px;
   max-height: 16px;
+  transition: rotate 1s ease-in-out;
+}
+
+label:hover > div > a + a > img {
+  rotate: 45deg;
 }
 
 label:hover > a > img {
@@ -54,6 +63,7 @@ label > input:checked + div + a > img {
   width: 100%;
 }
 
+
 label > input {
   visibility: hidden;
   position: absolute;
@@ -61,17 +71,17 @@ label > input {
 
 @media (min-width: 320px) {
   .container {
-    max-width: 400px
+    width: 300px
   }
 
   .content__img {
-    max-width: 400px;
+    max-width: 200px;
   }
 }
 
 @media (min-width: 820px) {
   .container {
-    width: 800px
+    width: 600px
   }
 
   .content__img {
@@ -81,11 +91,11 @@ label > input {
 
 @media (min-width: 1920px) {
   .container {
-    width: 1900px
+    width: 900px
   }
 
   .content__img {
-    max-width: 800px;
+    max-width: 600px;
   }
 }
 
